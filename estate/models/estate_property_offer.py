@@ -49,4 +49,18 @@ class EstatePropertyOffer(models.Model):
         ('check_price', 'CHECK(price > 0)',
          'The offer price must be stricly positive.')
     ]
+
+    @api.model_create_multi
+    def create(self, vals_list):
+        for vals in vals_list:
+            existing_offer = self.search([('property_id', '=', vals['property_id'])])
+            if existing_offer and vals['price'] <= min(existing_offer.mapped('price')):
+                raise exceptions.ValidationError(
+                    'Cannot create an offer with a lower amount than an existing offer.'
+                )
+            
+            property = self.env['estate.property'].browse(vals['property_id'])
+            property.state = 'offer_received'
+
+        return super().create(vals_list)
     
