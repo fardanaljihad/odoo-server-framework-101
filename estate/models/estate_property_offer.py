@@ -15,6 +15,7 @@ class EstatePropertyOffer(models.Model):
     validity = fields.Integer(default=7, string='Validity (days)')
     # inverse method is called when saving the record, while the compute method is called at each change of its dependencies.
     date_deadline = fields.Date(compute='_compute_date_deadline', inverse='_inverse_date_deadline', string='Deadline')
+    property_type_id = fields.Many2one(related='property_id.property_type_id', store=True)
 
     @api.depends('validity')
     def _compute_date_deadline(self):
