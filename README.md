@@ -22,6 +22,23 @@ The main Odoo Apps include an [Open Source CRM](https://www.odoo.com/page/crm),
 Odoo Apps can be used as stand-alone applications, but they also integrate seamlessly so you get
 a full-featured [Open Source ERP](https://www.odoo.com) when you install several Apps.
 
+---
+
+# The Real Estate Advertisement - Odoo Module
+
+## 📌 Description
+This repository contains an Odoo module designed to support the business process of real estate advertisement. 
+The module helps real estate companies manage properties, offers, and advertisement transactions more efficiently within the Odoo ecosystem.
+
+## 🚀 Key Features
+- Property management (listings for houses, apartments, land, etc.).
+- Property categorization by type (e.g., house, apartment, land, etc).
+- Property tagging (e.g., *cozy*, *renovated*).
+- Offer management with price validation.
+- Property state workflow (new → offer received → offer accepted → sold/cancelled).
+
+---
+
 ## Getting started with Odoo
 
 For a standard installation please follow the [Setup instructions](https://www.odoo.com/documentation/master/administration/install/install.html)
