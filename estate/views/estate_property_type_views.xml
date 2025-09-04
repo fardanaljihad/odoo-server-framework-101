@@ -17,7 +17,7 @@
                     </div>
                     <notebook>
                         <page string="Properties">
-                            <field name="property_ids">
+                            <field name="property_ids" readonly="True">
                                 <list>
                                     <field name="name"/>
                                     <field name="expected_price"/>
