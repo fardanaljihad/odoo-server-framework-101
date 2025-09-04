@@ -10,16 +10,17 @@
         <field name="name">estate.property.list</field>
         <field name="model">estate.property</field>
         <field name="arch" type="xml">
-            <list>
+            <list decoration-success="state in ['offer_received', 'offer_accepted']" decoration-bf="state=='offer_accepted'" decoration-muted="state=='sold'">
                 <field name="name"/>
                 <field name="property_type_id"/>
                 <field name="postcode"/>
+                <field name="tag_ids" widget="many2many_tags"/>
                 <field name="bedrooms"/>
                 <field name="living_area"/>
                 <field name="expected_price"/>
                 <field name="selling_price"/>
-                <field name="date_availability"/>
-                <field name="tag_ids" widget="many2many_tags"/>
+                <field name="state"/>
+                <field name="date_availability" optinal="hide"/>
             </list>
         </field>
     </record>
