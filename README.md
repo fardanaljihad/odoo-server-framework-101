@@ -6,10 +6,11 @@ The module helps real estate companies manage properties, offers, and advertisem
 
 ## 🚀 Key Features
 - Property management (listings for houses, apartments, land, etc.).
-- Property categorization by type (e.g., house, apartment, land, etc).
+- Property categorization by type.
 - Property tagging (e.g., *cozy*, *renovated*).
 - Offer management with price validation.
 - Property state workflow (new → offer received → offer accepted → sold/cancelled).
+- Integration with the Invoicing module (once a property's state is set to sold, an invoice is created in the Invoicing application).
 
 ---
 
